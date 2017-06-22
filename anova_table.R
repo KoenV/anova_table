@@ -38,7 +38,7 @@ anova_table = function(fit,package=c('lme4','nlme')){
         for (nrow in 1:nrow(general.df)){
             general.df[nrow,3] = format_pval(anova(fit)[nrow,6])
         }
-        print(general.df)
+        return(general.df)
 
     }
 
@@ -70,7 +70,7 @@ anova_table = function(fit,package=c('lme4','nlme')){
         for (nrow in 1:nrow(general.df)){
             general.df[nrow,3] = format_pval(anova(fit)[nrow,4])
         }
-        print(general.df)
+        return(general.df)
     }
     
 }
